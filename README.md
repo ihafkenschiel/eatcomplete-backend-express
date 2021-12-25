@@ -2,6 +2,10 @@
 Nutritional meal recommender app
 By Ian Hafkenschiel
 
+## License 
+Copyright 2021
+All rights reserved.
+Distribution of the software in any form is only allowed with explicit, prior permission from the owner.
 ## Setup
 
 1. Create a MySQL database called `eatcomplete` based off of the schema in `server/config/db-schema.sql` and load data
@@ -16,26 +20,24 @@ Change for your environment: DB_NAME, DB_USER, DB_PASSWORD, FULL_PATH's
 ## Install dependencies
 
 ```sh
-yarn ./server && yarn ./front-end
+yarn
 ```
 
 ## Running locally
 
 Run server:
 ```sh
-cd server && yarn start:local
-```
-
-Run front end:
-```
-cd front-end && yarn dev
+yarn start:local
 ```
 
 This will start up a node.js express server on port `9999` and run create-react-app on port `3000`
 
 Nodemon will auto hot-reload on any changes in the server directory, while create-react-app will auto hot-reload any changes in front-end directory
 
-`http://localhost:3000` will display a basic landing page with routing using `react-router` v6 and form example communicating with the express server
+Run frontend from repo [eatcomplete-frontend-react](https://github.com/ihafkenschiel/eatcomplete-frontend-react)
+
+`http://localhost:9999/graphql` will display graphql testing ground
+You can also use Postman with `http://localhost:9999/` to access the API
 
 ## Building Server
 
@@ -45,25 +47,17 @@ yarn build:server
 
 This will compile the server TypeScript code into a `dist` directory in the root directory
 
-## Building front-end
-
-```sh
-yarn build:front-end
-```
-
 ## Architecture
 
 1. Package Manager - Yarn
-2. Language - TypeScript *WIP
-3. Backend server - Node.js
-4. Backend API framework - Express.js
-5. Database - MySQL
-6. ORM - Sequelize
-7. Query Language/Server - Apollo + GraphQL
-8. Frontend framework - React 18 Alpha
-9. Data Architecture - Relay*
-10. UI Component Library - Material UI
-11. Theme - Devias Material Kit
-12. UI Component Explorer - Storybook*
+2. Linter - ESLint + Airbnb Style
+3. Formatter - Prettier
+4. Pre-commit hooks - Husky
+5. Language - TypeScript *WIP
+6. Backend server - Node.js
+7. Backend API framework - Express.js
+8. Database - MySQL
+9. ORM - Sequelize
+10. Query Language/Server - Apollo + GraphQL
 
 * Not yet implemented
