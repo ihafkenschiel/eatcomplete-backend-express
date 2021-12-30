@@ -20,10 +20,7 @@ export const resolvers = {
         limit: args.take,
         offset: args.skip,
       })
-      return {
-        data: result.rows,
-        count: result.count,
-      }
+      return result.rows
     },
     numNutrients: async () => {
       const result = await db.nutrients.count()
