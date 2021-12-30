@@ -4,6 +4,7 @@ import db from '../sequelize'
 export const typeDefs = gql`
   extend type Query {
     nutrients(take: Int, skip: Int): [Nutrient]
+    numNutrients: Int
     nutrient(id: ID!): Nutrient
   }
   type Nutrient {
@@ -19,7 +20,14 @@ export const resolvers = {
         limit: args.take,
         offset: args.skip,
       })
-      return result.rows
+      return {
+        data: result.rows,
+        count: result.count,
+      }
+    },
+    numNutrients: async () => {
+      const result = await db.nutrients.count()
+      return result
     },
     nutrient: async (_, args) => db.nutrients.findByPk(args.id),
   },

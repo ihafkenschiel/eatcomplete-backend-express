@@ -5,6 +5,7 @@ import db from '../sequelize'
 export const typeDefs = gql`
   extend type Query {
     foods(take: Int, skip: Int): [Food]
+    numFoods: Int
     food(id: ID!): Food
   }
   type Food {
@@ -23,6 +24,10 @@ export const resolvers = {
         offset: args.skip,
       })
       return result.rows
+    },
+    numFoods: async () => {
+      const result = await db.foods.count()
+      return result
     },
     food: async (_, args) => db.foods.findByPk(args.id),
   },
