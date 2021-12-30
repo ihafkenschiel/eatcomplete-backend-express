@@ -1,7 +1,10 @@
 {
   "name": "eatcomplete-server",
   "version": "2.0.0",
-  "description": "Nutritional food diary and meal recommender",
+  "description": "Nutritional food diary and meal recommender. Backend server.",
+  "author": "Ian Hafkenschiel (https://ianhafkenschiel.com)",
+  "license": "None",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "build:server": "tsc --skipLibCheck",
@@ -14,11 +17,6 @@
     "lint": "eslint ./",
     "lint:write": "eslint --debug ./ --fix"
   },
-  "keywords": [
-    "nutrition"
-  ],
-  "author": "Ian Hafkenschiel",
-  "license": "ISC",
   "dependencies": {
     "@types/cookie-parser": "1.4.2",
     "@types/cors": "2.8.12",
