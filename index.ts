@@ -6,7 +6,6 @@ import cookieParser from 'cookie-parser'
 import { ApolloServer } from 'apollo-server-express'
 
 // Local
-import routes from 'routes'
 import config from './config'
 import * as NutrientFoodsModule from './graphql/nutrient_foods'
 import * as FoodsModule from './graphql/foods'
@@ -37,6 +36,3 @@ apolloServer.start().then(() => {
     `Visit http://${config.db.host}:${PORT}/graphql/ to access GraphQL Query Builder`
   )
 })
-
-// Routes
-app.use('/', routes)
