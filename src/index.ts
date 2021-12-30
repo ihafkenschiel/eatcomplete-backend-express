@@ -7,9 +7,9 @@ import { ApolloServer } from 'apollo-server-express'
 
 // Local
 import config from './config'
-import * as NutrientFoodsModule from './graphql/nutrient_foods'
-import * as FoodsModule from './graphql/foods'
-import * as NutrientsModule from './graphql/nutrients'
+import * as NutrientFoodsModule from './resolvers/nutrient_foods'
+import * as FoodsModule from './resolvers/foods'
+import * as NutrientsModule from './resolvers/nutrients'
 
 const PORT = process.env.PORT || 9999
 

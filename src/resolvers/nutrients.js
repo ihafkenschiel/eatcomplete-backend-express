@@ -1,5 +1,5 @@
 import { gql } from 'apollo-server-express'
-import db from '../sequelize'
+import db from '../../sequelize'
 
 export const typeDefs = gql`
   extend type Query {

@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "ES6",
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "outDir": "dist",
     "removeComments": true,
     "sourceMap": true,
-    "baseUrl": "./",
-    "outDir": "dist",
-    "allowJs": true,
-    "noImplicitAny": true,
-    "strict": true
+    "strict": true,
+    "target": "ES6"
   },
-  "include": ["./"]
+  "include": ["src"]
 }

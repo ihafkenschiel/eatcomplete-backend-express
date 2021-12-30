@@ -1,9 +1,9 @@
 import Sequelize from 'sequelize'
 // Local
-import config from './config'
-import NutrientFoodsModel from './models/nutrient_foods'
-import FoodsModel from './models/foods'
-import NutrientsModel from './models/nutrients'
+import config from './src/config'
+import NutrientFoodsModel from './src/models/nutrient_foods'
+import FoodsModel from './src/models/foods'
+import NutrientsModel from './src/models/nutrients'
 
 const db = {}
 
