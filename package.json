@@ -27,6 +27,7 @@
     "@types/mysql": "^2.15.8",
     "@types/node": "16.11.12",
     "@types/uuid": "8.3.3",
+    "@types/validator": "^13.7.1",
     "apollo-server-express": "^3.5.0",
     "colors": "1.4.0",
     "concurrently": "6.4.0",

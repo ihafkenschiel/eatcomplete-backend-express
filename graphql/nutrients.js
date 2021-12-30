@@ -15,7 +15,6 @@ export const typeDefs = gql`
 export const resolvers = {
   Query: {
     nutrients: async () => db.nutrients.findAll(),
-    nutrient: async (obj, args, context, info) =>
-      db.nutrients.findByPk(args.id),
+    nutrient: async (obj, args) => db.nutrients.findByPk(args.id),
   },
 }

@@ -52,7 +52,7 @@ This will compile the server TypeScript code into a `dist` directory in the root
 1. Package Manager - Yarn
 2. Linter - ESLint + Airbnb Style
 3. Formatter - Prettier
-4. Pre-commit hooks - Husky
+4. Pre-commit hooks - Husky*
 5. Language - TypeScript *WIP
 6. Backend server - Node.js
 7. Backend API framework - Express.js

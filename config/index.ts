@@ -1,5 +1,6 @@
 import dotenv from 'dotenv'
-dotenv.config({ silent: process.env.NODE_ENV === 'production' })
+
+dotenv.config()
 
 const { env } = process
 
@@ -9,7 +10,7 @@ const config = {
     user: env.DB_USER || 'root',
     password: env.DB_PASSWORD || '',
     database: env.DB_NAME || 'eatcomplete',
-    port: parseInt(env.DB_PORT) || 3306,
+    port: env.DB_PORT || '3306',
   },
 }
 

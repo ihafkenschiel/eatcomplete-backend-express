@@ -1,5 +1,4 @@
-const Sequelize = require('sequelize')
-module.exports = function (sequelize, DataTypes) {
+const NutrientsModel = (sequelize, DataTypes) => {
   return sequelize.define(
     'nutrients',
     {
@@ -29,3 +28,5 @@ module.exports = function (sequelize, DataTypes) {
     }
   )
 }
+
+export default NutrientsModel

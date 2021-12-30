@@ -1,9 +1,13 @@
 import Sequelize from 'sequelize'
+// Local
 import config from './config'
+import NutrientFoodsModel from './models/nutrient_foods'
+import FoodsModel from './models/foods'
+import NutrientsModel from './models/nutrients'
 
-var db = {}
+const db = {}
 
-const sequelize = new Sequelize(
+const sequelizeConnection = new Sequelize(
   config.db.database,
   config.db.user,
   config.db.password,
@@ -25,15 +29,11 @@ const sequelize = new Sequelize(
   }
 )
 
-let models = [
-  require('./models/nutrient_foods'),
-  require('./models/foods'),
-  require('./models/nutrients'),
-]
+const models = [NutrientFoodsModel, FoodsModel, NutrientsModel]
 
 // Initialize models
 models.forEach((model) => {
-  const seqModel = model(sequelize, Sequelize)
+  const seqModel = model(sequelizeConnection, Sequelize)
   db[seqModel.name] = seqModel
 })
 
@@ -44,7 +44,7 @@ Object.keys(db).forEach((key) => {
   }
 })
 
-db.sequelize = sequelize
+db.sequelize = sequelizeConnection
 db.Sequelize = Sequelize
 
 export default db

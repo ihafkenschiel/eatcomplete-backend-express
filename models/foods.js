@@ -1,6 +1,4 @@
-const Sequelize = require('sequelize')
-
-module.exports = function (sequelize, DataTypes) {
+const FoodsModel = (sequelize, DataTypes) => {
   return sequelize.define(
     'foods',
     {
@@ -38,3 +36,5 @@ module.exports = function (sequelize, DataTypes) {
     }
   )
 }
+
+export default FoodsModel
