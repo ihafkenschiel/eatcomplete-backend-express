@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "Nutritional food diary and meal recommender. Backend server.",
   "author": "Ian Hafkenschiel (https://ianhafkenschiel.com)",
-  "license": "None",
+  "license": "SEE LICENSE IN LICENSE.txt",
   "private": true,
   "main": "index.js",
   "scripts": {
