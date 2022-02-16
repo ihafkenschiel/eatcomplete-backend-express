@@ -15,7 +15,8 @@
     "format": "prettier-eslint --write \"src/**/*.{js,jsx}\"",
     "prettify": "npx prettier --write .",
     "lint": "eslint ./",
-    "lint:write": "eslint --debug ./ --fix"
+    "lint:write": "eslint --debug ./ --fix",
+    "branches": "git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
   },
   "dependencies": {
     "@types/cookie-parser": "1.4.2",
